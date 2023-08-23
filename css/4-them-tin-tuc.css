@@ -397,3 +397,402 @@ nav{
     padding: 15px 15px;
     
 }
+/* Responsive */
+@media screen and (max-width: 600px) {
+    /* header */
+    .container{
+        width: 100%;
+        height: auto;
+    }
+    .header{
+        background-color: #191970;
+        width: 100vw;
+        z-index: 99;
+       
+    }
+    nav{
+        display: flex;/*Logo và menu trên cùng 1 hàng*/
+        justify-content: space-between;
+        justify-items: center;
+        flex-direction: column;
+    }
+    .top .logo img{
+        /* max-width: 350px; */
+        width: 95vw;
+        height: auto;
+        padding-top: 4px;
+    }
+    .menu{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        font-size: 16px;
+        
+    }
+    .menu li a{
+        color: white;
+        padding: 20px 20px;
+        display: block;
+        text-decoration: none;
+    }
+    .menu li{
+        position: relative;
+    }
+    /*Thiết lập border khi hover*/
+    .menu > li > a{
+        position: relative;
+    }
+    .menu > li > a::after{
+         /* Tạo gạch chân bằng cách sử dụng pseudo-element :after */
+         content: "";
+         position: absolute;
+         display: block;
+         left: 50%; /* Căn giữa gạch chân theo chiều ngang */
+         top: 0px; /* Đặt vị trí của gạch chân dưới đoạn văn bản */
+         width: 0px; /* Ẩn gạch chân */
+         height: 4px; /* Đặt độ dày của gạch chân */
+         background-color: white; /* Đặt màu của gạch chân */
+         transform: translateX(13%); /* Căn giữa gạch chân theo trục tâm */
+         transition: all 1s; /* Thêm hiệu ứng chuyển động cho gạch chân */
+    }
+    .menu > li:not(:first-child):hover > a::after{
+        width: 80%;
+        left: 0px;
+    }
+    .search-box{ 
+        background: white;
+        position: absolute;
+        border-radius: 30px;
+        right: 2%;
+        top: 10px;
+    }
+    .search-box .search-text{
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.25s ease-in-out;
+    }
+    .search-box:hover .search-text, .search-box .search-text:valid{
+        width: 150px;
+        padding: 10px 0px 10px 15px;
+    }
+    .search-box .search-btn{
+        padding: 15px;
+        border-radius: 50%;
+        background: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .search-button {
+        background-color:rgba(0, 0, 0, 0); /* Màu nền */
+        color: white; /* Màu chữ */
+        border: none; /* Loại bỏ đường viền */
+        padding: 15px 30px; /* Khoảng cách giữa nội dung và viền */
+        text-align: center; /* Căn giữa nội dung */
+        text-decoration: none; /* Loại bỏ gạch chân */
+        display: inline-block; /* Hiển thị trên cùng một dòng */
+        font-size: 16px; /* Cỡ chữ */
+        cursor: pointer; /* Đổi con trỏ chuột thành bàn tay */
+        text-shadow: rgba(0, 0, 0, 0.8);
+      }
+      /* Định dạng khi hover lên button */
+      .search-button:hover {
+        background-color: #191970; /* Màu nền thay đổi */
+      }
+      
+      /* Định dạng khi nhấn vào button */
+      .search-button:active {
+        background-color: #212189; /* Màu nền thay đổi */
+      }
+      .menu-mo-rong{
+        display: none;
+      }
+    .flex{
+        display: flex;
+    }
+    .tool li{
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .tool li > a::after {
+        /* Tạo gạch chân bằng cách sử dụng pseudo-element :after */
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%; /* Căn giữa gạch chân theo chiều ngang */
+        bottom: 0px; /* Đặt vị trí của gạch chân dưới đoạn văn bản */
+        width: 0; /* Ẩn gạch chân */
+        height: 4px; /* Đặt độ dày của gạch chân */
+        background-color: white; /* Đặt màu của gạch chân */
+        transform: translateX(12%); /* Căn giữa gạch chân theo trục tâm */
+        transition: all 1s; /* Thêm hiệu ứng chuyển động cho gạch chân */
+    }
+    .tool li:hover a::after {
+        /* Khi hover vào đoạn văn bản, thay đổi thuộc tính của gạch chân */
+        width: 80%; /* Hiện gạch chân và chiếm toàn bộ chiều rộng của đoạn văn bản */
+        left: 0; /* Đặt vị trí trái của gạch chân bằng với vị trí trái của đoạn văn bản */
+    }
+    .tool{
+        list-style-type: none;
+        /* position:absolute; */
+        top: 100%;
+        width: 100%;
+        justify-content: center;
+        font-size: 15px;
+        background-color: #212189;
+     } 
+     li.none{
+        display: none;
+     }
+    .tool a{
+        text-decoration: none;
+        display: block;
+        width: 9vw;
+        padding: 5px 0px;
+        /* padding: 15px; */
+        color:white;
+    }
+    .tool > li{
+        text-align: center;
+    }
+    /* NỘI DUNG */
+    .thongbao {
+        width: 100%;
+        height: 200px;  
+        position: relative;
+        overflow: hidden;
+    }
+    .thongbao > div {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: left 1s linear;
+    }
+    .thongbao img {
+        width: 100%;
+        height: 50vh;
+    }
+    .slider{
+        position: relative;
+    }
+    .thongbao-button .prev{
+        padding: 15px;
+        position: absolute;
+        top: 35%;
+        left: 0;
+    }
+    .thongbao-button .next{
+        padding: 15px;
+        position: absolute;
+        top: 35%;
+        right: 0;
+    }
+    .thongbao-button .button1{
+        font-size: 30px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        color: whitesmoke;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        display: none;
+    }
+    .slider:hover .button1{
+        display: block;
+    }
+    .thongbao-button .digit{
+        font-size: 0px;
+        padding: 5px 5px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgb(184, 180, 180);
+        position: absolute;
+        position: relative;
+        bottom: 25px;
+        left: 42%;
+    }
+    /* them tin tuc */
+    .them-tin-tuc{
+        padding: 1rem 1rem ;
+    }
+    .name-tin-tuc{
+        padding-bottom: 1rem;
+        font-size: 23px;
+    }
+    .content-tin-tuc{
+        padding-bottom: 2rem;
+        border-bottom: 2px solid lightgray;
+        margin-bottom: 1rem;
+    }   
+    .big-p{
+        font-size: 20px;
+        padding-bottom: 1rem;
+    }
+    .tin-tuc img{
+        width: 100%;
+        height: 80vh;
+        justify-content: center;
+        
+    }
+    .tin-lien-quan{
+        padding: 1rem;
+    }
+    .name-tin-lien-quan{
+        font-size: 20px;
+    }
+    .daotao-img img{
+        transition: transform 0.5s ease;
+        width: 100%;
+        height: 40vh;
+    }
+    .daotao-img{
+        overflow: hidden;
+    }
+    .daotao-img:hover img{
+        transform: scale(1.05);
+    }
+    .daotao-text h3{
+        color: #191970;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .daotao-text a{
+        color: black;
+        text-decoration: none;
+    }
+    .daotao-text{
+        height: auto;
+        padding: 12px;
+        position: relative;
+    }
+    .daotao-text a:hover{
+        color: red;
+    }
+    .tin-lien-quan .run-tin-lien-quan{
+        justify-content: center;
+    }
+    .run-tin-lien-quan{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .name-tin-lien-quan{
+        text-align: center;
+        font-size: 25px;
+        color: #212189;
+    }
+    .run{
+        padding: 1rem;
+        width: 85vw;
+    }
+    .daotao-img img {
+    width: 100%;
+    height: 40vh;
+    }
+    
+    .daotao-img:hover img {
+    transform: scale(1.05);
+    }
+    /* footer */
+    .foot{
+        padding: 20px;
+        background-color: #1d559f;
+        color: white;
+        padding-top: 2vw;
+    }
+    .foot p{
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    .foot-above{
+        padding: 3vw;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 3vw;
+    }
+    .foot-above img{
+        padding-bottom: 3vw;
+        width: 100%;
+    }
+    h4{
+        font-size: 25px;
+        padding-bottom: 1rem;
+       
+    }
+    .content-info span {
+        color: #EAA023;
+    }
+    .name-contact h5{
+        padding-top: 25px;
+    }
+    .content-info a{
+        text-decoration: none;
+    }
+    .address span{
+        color: white;
+    }
+    .address a{
+        text-decoration: none;
+    }
+    .address span:hover{
+        color: #EAA023;
+    }
+    .foot-below{
+        display: flex;
+        flex-direction: column;
+    }
+    .address-big {
+        padding-left: 1rem;
+    }
+    .info{
+        padding-left: 1rem;
+    }
+    .contact{
+        padding-top: 2vw;
+       
+    }
+    h5{
+        font-size: 25px;
+    }
+    .icon-contact{
+        padding-top: 15px;
+        font-size: 30px;
+        display: flex;
+        padding-bottom: 25px;
+    }
+    .icon-contact p{
+        font-size: 30px;
+    }
+    .icon-contact span{
+        margin: 8px;
+        color: white;
+    }
+    .icon-contact span:hover{
+        color: rgb(168, 168, 168);
+    }
+
+    .go-to-top{
+        position: fixed;
+        background-color: rgba(41, 200, 209, 0.5);
+        right: 2rem;
+        bottom: 20px;
+        display: none;
+        border-radius: 10px;
+    }
+    .go-to-top a{
+        display: block;
+        padding: 15px 15px;
+        
+    }
+}

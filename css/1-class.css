@@ -929,8 +929,19 @@ h5{
     html{
         overflow-x: hidden;
     }
-    .container {
-      position: relative;
+    .container{
+        width: 100%;
+        height: auto;   
+        flex-direction: column;
+    }
+    .header{
+        background-color: transparent;
+        position: fixed;
+        /* width: 100%; */
+        z-index: 99;
+    }
+    li.none{
+        display: none;
     }
     .animated-text {
         font-size: 10px;  /* Đặt kích thước ban đầu của chữ */
@@ -942,42 +953,94 @@ h5{
           font-size: 1px;  /* Chữ nhỏ nhất */
         }
         100% {
-          font-size: 35px;  /* Kích thước ban đầu của chữ */
+          font-size: 30px;  /* Kích thước ban đầu của chữ */
         }
       }
-    .menu {
-      display: none;
+    .container::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all 0.3s ease;
+    }
+    .container.active::before{
+        transform: translateY(0);
+    }
+    .tool::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #212189;
+        z-index: -1;
+        transform: translateY(-360%);
+        transition: all 0.3s ease;
+    }
+    .tool.active-menu::before{
+        transform: translateY(0);
+    }
+    nav{
+        display: flex;/*Logo và menu trên cùng 1 hàng*/
+        /*justify-content: space-between;
+        justify-items: center;*/
     }
     .logo{
-       display: none;
+        width: 90vw;
+        height: auto;
     }
-    .tool {
-      position: static;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 14px;
+    .top .logo img{
+        /*max-width: 350px;*/
+        width: 100%;
+        height: auto;
+        padding-top: 4px;
     }
-    .big-image {
-        height: 80vh;
-      }
-      .big-image::before {
-        animation: Inout 5s infinite;
-      }
-      .big-image::after {
-        display: none;
-      }
-      .big-image .big-image-content h1 {
-        font-size: 30px;
-      }
-      .tool{
-        display: none;
-      }
-      .mo-rong{
+    .menu{
         display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 65%;
+        font-size: 16px;
+        width: 100%;
+       
+    }
+    .menu li a{
+        color: white;
+        padding: 25px 20px;
+        display: block;
+        text-decoration: none;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+    .menu li{
         position: relative;
-      }
-      .menu-mo-rong {
+    }
+    /*Thiết lập border khi hover*/
+    .menu > li > a{
+        position: relative;
+    }
+    .menu > li > a::after{
+         /* Tạo gạch chân bằng cách sử dụng pseudo-element :after */
+         content: "";
+         position: absolute;
+         display: block;
+         left: 50%; /* Căn giữa gạch chân theo chiều ngang */
+         top: 0px; /* Đặt vị trí của gạch chân dưới đoạn văn bản */
+         width: 0px; /* Ẩn gạch chân */
+         height: 4px; /* Đặt độ dày của gạch chân */
+         background-color: white; /* Đặt màu của gạch chân */
+         transform: translateX(13%); /* Căn giữa gạch chân theo trục tâm */
+         transition: all 1s; /* Thêm hiệu ứng chuyển động cho gạch chân */
+    }
+    .menu > li:not(:first-child):hover > a::after{
+        width: 80%;
+        left: 0px;
+    }
+    .search-button {
         background-color:rgba(0, 0, 0, 0); /* Màu nền */
         color: white; /* Màu chữ */
         border: none; /* Loại bỏ đường viền */
@@ -988,18 +1051,117 @@ h5{
         font-size: 16px; /* Cỡ chữ */
         cursor: pointer; /* Đổi con trỏ chuột thành bàn tay */
         text-shadow: rgba(0, 0, 0, 0.8);
-        margin-left: 7rem;
-    
       }
       /* Định dạng khi hover lên button */
-      .menu-mo-rong:hover {
+      .search-button:hover {
         background-color: #191970; /* Màu nền thay đổi */
       }
       
       /* Định dạng khi nhấn vào button */
-      .menu-mo-rong:active {
+      .search-button:active {
         background-color: #212189; /* Màu nền thay đổi */
       }
+      .menu-mo-rong{
+        display: none;
+      }
+    .flex{
+        display: flex;
+    }
+    .tool li{
+        position: relative;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .tool li > a::after {
+        /* Tạo gạch chân bằng cách sử dụng pseudo-element :after */
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%; /* Căn giữa gạch chân theo chiều ngang */
+        bottom: 0px; /* Đặt vị trí của gạch chân dưới đoạn văn bản */
+        width: 0; /* Ẩn gạch chân */
+        height: 4px; /* Đặt độ dày của gạch chân */
+        background-color: white; /* Đặt màu của gạch chân */
+        transform: translateX(12%); /* Căn giữa gạch chân theo trục tâm */
+        transition: all 1s; /* Thêm hiệu ứng chuyển động cho gạch chân */
+    }
+    .tool li:hover a::after {
+        /* Khi hover vào đoạn văn bản, thay đổi thuộc tính của gạch chân */
+        width: 80%; /* Hiện gạch chân và chiếm toàn bộ chiều rộng của đoạn văn bản */
+        left: 0; /* Đặt vị trí trái của gạch chân bằng với vị trí trái của đoạn văn bản */
+    }
+    .tool{
+        list-style-type: none;
+        position:absolute;
+        top: 100%;
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+     } 
+    .tool a{
+        text-decoration: none;
+        display: block;
+        width: 9vw;
+        padding: 5px 0px;
+        /* padding: 15px; */
+        color:white;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+    .tool > li{
+        text-align: center;
+    }
+    /* big image*/
+    .big-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .big-image::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/OU_picture.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: -2;
+        animation: Inout 5s infinite;
+    }
+    @keyframes Inout{
+        0%,100%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.1);
+        }
+    }
+    .big-image::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.2;
+        z-index: -2;
+    }
+    .big-image .big-image-content {
+        text-align: center;
+        max-width: 900px;
+    }
+    .big-image .big-image-content h1{
+        font-size: 50px;
+        color: white;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+    /* about */
      .row{
         flex-direction: column;
      } 
@@ -1065,9 +1227,9 @@ h5{
         transition: all 0.3 ease;
     
     }
-    button span{
-        color: var(--sub-color);
-        padding: 1rem 0.6rem;
+    .buttons span{
+        color: white;
+        padding: 1rem 0rem;
     }
     a{
         text-decoration: none;

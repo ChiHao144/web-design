@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuyển dung | OU</title>
+    <title>Tuyển dụng | OU</title>
     <link href="images/ou.png" rel="shortcut icon"/>
     <link rel="stylesheet" href="css/5-tuyen-dung.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,20 +14,23 @@
     <script src="js/js05.js"></script>
 </head>
 <body>
+    <div class="go-to-top" id="go-to-top">
+        <a href="javascript:;" onclick="goToTop()"><i class="fa-solid fa-caret-up"></i></a>
+    </div>
     <section class="top">
         <div class="header">
             <nav class="container">
-                    <a href="1-OpenUniversity.html" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="images/logo.png" alt="ou.logo">
                     </a>
                     <ul class="menu">
                         <li><a href="#"><b>Thông Tin:</b></i></a></li>
                         <li><a href="#"><i class="fa-solid fa-user"></i><b> Tuyển Dụng</b></a></li>                        
                         <li><a href="#"><i class="fa-solid fa-calendar-days"></i><b> Công Tác</b></a></li>
-                        <li><a href="#"><i class="fa-solid fa-diagram-project"></i><b> Sơ Đồ</b></a></li>
-                        <li><a href="#"><i class="fa-solid fa-users"></i><b> Cựu Sinh Viên</b></a></li>
-                        <li><a href="#"><i class="fa-solid fa-envelope"></i><b> TT Nội Bộ</b></a></li>
-                        <li><a href="#"><i class="fa-solid fa-earth-americas"></i><b> English</b></a></li>
+                        <li class="none"><a href="#"><i class="fa-solid fa-diagram-project"></i><b> Sơ Đồ</b></a></li>
+                        <li class="none"><a href="#"><i class="fa-solid fa-users"></i><b> Cựu Sinh Viên</b></a></li>
+                        <li class="none"><a href="#"><i class="fa-solid fa-envelope"></i><b> TT Nội Bộ</b></a></li>
+                        <li class="none"><a href="#"><i class="fa-solid fa-earth-americas"></i><b> English</b></a></li>
                     </ul>
                     <div class="mo-rong">
                         <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i><b> Tìm kiếm</b></button>
@@ -40,11 +43,11 @@
                     <li><a href="2-gioi-thieu.html"><b>Giới thiệu</b></a></li>
                     <li><a href="#"><b>Khoa - Ban</b></a></li>
                     <li><a href="#"><b>Cơ Sở</b></a></li>
-                    <li><a href="#"><b>Trung Tâm</b></i></a></li>
-                    <li><a href="#"><b>Đào Tạo</b></i></a></li>
-                    <li><a href="#"><b>Tuyển Sinh</b></i></a></li>
-                    <li><a href="#"><b>Thư Viện</b></a></li>
-                    <li><a href="#"><b>Khác</b></a></li>
+                    <li class="none"><a href="#"><b>Trung Tâm</b></i></a></li>
+                    <li class="none"><a href="#"><b>Đào Tạo</b></i></a></li>
+                    <li class="none"><a href="#"><b>Tuyển Sinh</b></i></a></li>
+                    <li class="none"><a href="#"><b>Thư Viện</b></a></li>
+                    <li class="none"><a href="#"><b>Khác</b></a></li>
                 </ul>
             </div>
         </div>
@@ -61,100 +64,306 @@
         </div>
         <div class="tab-tuyen-dung">
             <ul class="tab">
-                <li class="active"><a href="#tab01">Giảng viên</a></li>
-                <li><a href="#tab02">Viên chức</a></li>
-                <li><a href="#tab03">Nghiên cứu sinh</a></li>
+                <li class="active #tab01">Giảng viên</li>
+                <li class="#tab02">Viên chức</li>
+                <li class="#tab03">Nghiên cứu sinh</li>
             </ul>
             <div class="tab-content">
                 <div id="tab01" class="picture">
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/giang-vien-1.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Tiếu chí tuyển dụng</h3>
+                            <a href="#">Có khả năng sư phạm, khả năng nghiên cứu khoa học.
+                                Có tinh thần làm việc tự giác, tích cực, yêu nghề và có ý định làm việc gắn bó lâu dài với nhà trường.
+                                Có kinh nghiệm giảng dạy, làm việc ở các trường đại học, cơ sở giáo dục trong và ngoài nước.
+                                Có các công trình nghiên cứu khoa học trong và ngoài nước được công nhận.
+                                Có kiến thức về môi trường làm việc trong lĩnh vực giáo dục.</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/giang-vien-2.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Quyền lợi</h3>
+                            <a href="#">Được tuyển dụng là Viên chức.
+                                 Được chi trả mức thu nhập xứng đáng với trình độ và năng lực.
+                                Được làm việc trong môi trường thân thiện, hợp tác và ổn định lâu dài.
+                                Được tạo điều kiện học hỏi, trao đổi kinh nghiệm với các tổ chức giáo dục trong và ngoài nước.
+                                Được học tập, bồi dưỡng nâng cao trình độ và năng lực.
+                                Được tham gia đầy đủ các chế độ bảo hiểm theo quy định của pháp luật.</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/giang-vien-3.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Tiêu chuẩn chung</h3>
+                            <a href="#">Có trình độ phù hợp với vị trí dự tuyển
+                                Có trình độ Thạc sĩ trở lên.
+                                Có khả năng sư phạm, khả năng nghiên cứu khoa học.
+                                Có tinh thần làm việc tự giác, tích cực, yêu nghề và có ý định làm việc gắn bó lâu dài với nhà trường.
+                                Có kinh nghiệm giảng dạy, làm việc ở các trường đại học, cơ sở giáo dục trong và ngoài nước.
+                                Có các công trình nghiên cứu khoa học trong và ngoài nước được công nhận.</a>
                         </div>
                     </div>
                 </div>
                 <div id="tab02"  class="picture">
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/12-06-2015.jpg" alt=""></a>
+                            <a href="#"><img src="images/vien-chuc-1.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Tiêu chuẩn chung</h3>
+                            <a href="#">Có trình độ theo tiêu chuẩn tuyển dụng từng đơn vị cụ thể.
+                                Có kiến thức về lĩnh vực giáo dục và đào tạo.
+                                Có kỹ năng về lĩnh vực tổng hợp, báo cáo, lập kế hoạch.
+                                Sử dụng tin học văn phòng thành thạo.
+                                Có tinh thần làm việc tự giác, tích cực và có ý định làm việc gắn bó lâu dài với nhà trường.
+                                Có năng lực ngoại ngữ (ưu tiên Tiếng Anh).</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/vien-chuc-2.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Quyền lợi</h3>
+                            <a href="#">Được tuyển dụng là Viên chức.
+                                Được chi trả mức thu nhập xứng đáng với trình độ và năng lực.
+                                Được làm việc trong môi trường thân thiện, hợp tác và ổn định lâu dài.
+                                Được tạo diều kiện học hỏi, trao đổi kinh nghiệm với các tổ chức giáo dục trong và ngoài nước.
+                                Được học tập, bồi dưỡng nâng cao trình độ và năng lực.
+                                Được tham gia đầy đủ các chế độ bảo hiểm theo quy định của pháp luật.</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/vien-chuc-3.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Cần chuẩn bị</h3>
+                            <a href="#">Mẫu Phiếu đăng ký dự tuyển (hoặc download tại website ou.edu.vn mục Tuyển dụng).
+                                CCCD, Hộ khẩu, Giấy khai sinh (Bản sao có công chứng).
+                                Các văn bằng, chứng chỉ và bảng điểm liên quan của các trình độ đào tạo từ Đại học trở lên (Bản sao có công chứng).
+                                Trường hợp có văn bằng do cơ sở nước ngoài cấp phải được công chứng dịch thuật sang tiếng Việt; có chứng nhận tương đương văn bằng của Cục Quản lý chất lượng – Bộ Giáo dục và Đào tạo.</a>
                         </div>
                     </div>
                 </div>
                 <div id="tab03"  class="picture">
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/15-06-1990.jpg" alt=""></a>
+                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Thông báo</h3>
+                            <a href="#">Sáng ngày 08/01/2022, tại hội trường 602 cơ sở 97 Võ Văn Tần, Trường Đại học Mở thành phố Hồ Chí Minh đã tổ chức buổi sinh hoạt đầu khóa với tân nghiên cứu sinh khóa 2021 trong không khí hân hoan phấn khởi. Đến tham dự Chương trình gặp mặt có sự hiện diện của GS.TS Nguyễn Minh Hà – Hiệu trưởng nhà Trường – Chủ tịch HĐCM chuyên ngành Kinh tế học; TS. Nguyễn Thị Xuân Lan – Phó Trưởng Khoa Đào tạo SĐH; PGS. TS. Nguyễn Trọng Phước – Trưởng khoa Xây dựng – Chủ tịch HĐCM chuyên ngành Kỹ thuật xây dựng; TS.</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/nghien-cuu-sinh-1.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Nghiên cứu sinh học</h3>
+                            <a href="#">Ngành Công nghệ sinh học cũng có thể được hiểu theo nghĩa hẹp bao gồm những kỹ thuật hiện đại như công nghệ di truyền và các kỹ thuật cao cấp như cố định enzyme, tạo dòng vi khuẩn tổng hợp các loại protein cho con người hay tạo các kháng thể đơn dòng. Mục tiêu của ngành này là sản xuất ở quy mô công nghiệp các chế phẩm sinh học có chất lượng cao, phục vụ cho nhu cầu và lợi ích của con người Đồng thời, ngành này góp phần rất lớn trong công cuộc phát triển kinh tế.</a>
                         </div>
                     </div>
                     <div class="run">
                         <div class="daotao-img">
-                            <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                            <a href="#"><img src="images/nghien-cuu-sinh-2.jpg" alt=""></a>
                         </div>
                         <div class="daotao-text">
-                            <h3>Đào tạo nghiên cứu sinh</h3>
-                            <a href="#">Tận dụng chuyên môn và công nghệ tiên tiến để cung cấp kiến thức tuyệt vời cho từng nhu cầu riêng biệt của cá nhân</a>
+                            <h3>Chương trình đào tạo</h3>
+                            <a href="#">Đặc biệt, khi theo học ngành Công nghệ sinh học của Đại học Mở TP.HCM thì bạn sẽ có các lựa chọn khác nhau đó là chương trình tiêu chuẩn và chương trình chất lượng cao. Khối lượng kiến thức của chương trình tiêu chuẩn sẽ là 130 tín chỉ còn chương trình chất lượng cao là 142 tín chỉ. Lợi thế của chương trình chất lượng cao là bạn sẽ được học số tiết học phần tiếng Anh và các môn chuyên ngành khác bằng tiếng Anh nhiều hơn chương trình tiêu chuẩn.</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="hidden">
+        <div class="name-hidden">
+            <h3>Giảng viên</h3>
+        </div>
+        <div class="hinhanh">
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/giang-vien-1.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Tiêu chí tuyển dụng</h3>
+                    <a href="#">Có khả năng sư phạm, khả năng nghiên cứu khoa học.
+                        Có tinh thần làm việc tự giác, tích cực, yêu nghề và có ý định làm việc gắn bó lâu dài với nhà trường.
+                        Có kinh nghiệm giảng dạy, làm việc ở các trường đại học, cơ sở giáo dục trong và ngoài nước.
+                        Có các công trình nghiên cứu khoa học trong và ngoài nước được công nhận.
+                        Có kiến thức về môi trường làm việc trong lĩnh vực giáo dục.</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/giang-vien-2.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Quyền lợi</h3>
+                    <a href="#">Được tuyển dụng là Viên chức.
+                         Được chi trả mức thu nhập xứng đáng với trình độ và năng lực.
+                        Được làm việc trong môi trường thân thiện, hợp tác và ổn định lâu dài.
+                        Được tạo điều kiện học hỏi, trao đổi kinh nghiệm với các tổ chức giáo dục trong và ngoài nước.
+                        Được học tập, bồi dưỡng nâng cao trình độ và năng lực.
+                        Được tham gia đầy đủ các chế độ bảo hiểm theo quy định của pháp luật.</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/giang-vien-3.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Tiêu chuẩn chung</h3>
+                    <a href="#">Có trình độ phù hợp với vị trí dự tuyển
+                        Có trình độ Thạc sĩ trở lên.
+                        Có khả năng sư phạm, khả năng nghiên cứu khoa học.
+                        Có tinh thần làm việc tự giác, tích cực, yêu nghề và có ý định làm việc gắn bó lâu dài với nhà trường.
+                        Có kinh nghiệm giảng dạy, làm việc ở các trường đại học, cơ sở giáo dục trong và ngoài nước.
+                        Có các công trình nghiên cứu khoa học trong và ngoài nước được công nhận.</a>
+                </div>
+            </div>
+        </div>
+        <div class="name-hidden">
+            <h3>Viên chức</h3>
+        </div>
+        <div class="hinhanh">
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/vien-chuc-1.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Tiêu chuẩn chung</h3>
+                    <a href="#">Có trình độ theo tiêu chuẩn tuyển dụng từng đơn vị cụ thể.
+                        Có kiến thức về lĩnh vực giáo dục và đào tạo.
+                        Có kỹ năng về lĩnh vực tổng hợp, báo cáo, lập kế hoạch.
+                        Sử dụng tin học văn phòng thành thạo.
+                        Có tinh thần làm việc tự giác, tích cực và có ý định làm việc gắn bó lâu dài với nhà trường.
+                        Có năng lực ngoại ngữ (ưu tiên Tiếng Anh).</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/vien-chuc-2.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Quyền lợi</h3>
+                    <a href="#">Được tuyển dụng là Viên chức.
+                        Được chi trả mức thu nhập xứng đáng với trình độ và năng lực.
+                        Được làm việc trong môi trường thân thiện, hợp tác và ổn định lâu dài.
+                        Được tạo diều kiện học hỏi, trao đổi kinh nghiệm với các tổ chức giáo dục trong và ngoài nước.
+                        Được học tập, bồi dưỡng nâng cao trình độ và năng lực.
+                        Được tham gia đầy đủ các chế độ bảo hiểm theo quy định của pháp luật.</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/vien-chuc-3.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Cần chuẩn bị</h3>
+                    <a href="#">Mẫu Phiếu đăng ký dự tuyển (hoặc download tại website ou.edu.vn mục Tuyển dụng).
+                        CCCD, Hộ khẩu, Giấy khai sinh (Bản sao có công chứng).
+                        Các văn bằng, chứng chỉ và bảng điểm liên quan của các trình độ đào tạo từ Đại học trở lên (Bản sao có công chứng).
+                        Trường hợp có văn bằng do cơ sở nước ngoài cấp phải được công chứng dịch thuật sang tiếng Việt; có chứng nhận tương đương văn bằng của Cục Quản lý chất lượng – Bộ Giáo dục và Đào tạo.</a>
+                </div>
+            </div>
+        </div>
+        <div class="name-hidden">
+            <h3>Nghiêng cứu sinh</h3>
+        </div>
+        <div class="hinhanh">
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/nghien-cuu-sinh.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Thông báo</h3>
+                    <a href="#">Sáng ngày 08/01/2022, tại hội trường 602 cơ sở 97 Võ Văn Tần, Trường Đại học Mở thành phố Hồ Chí Minh đã tổ chức buổi sinh hoạt đầu khóa với tân nghiên cứu sinh khóa 2021 trong không khí hân hoan phấn khởi. Đến tham dự Chương trình gặp mặt có sự hiện diện của GS.TS Nguyễn Minh Hà – Hiệu trưởng nhà Trường – Chủ tịch HĐCM chuyên ngành Kinh tế học; TS. Nguyễn Thị Xuân Lan – Phó Trưởng Khoa Đào tạo SĐH; PGS. TS. Nguyễn Trọng Phước – Trưởng khoa Xây dựng – Chủ tịch HĐCM chuyên ngành Kỹ thuật xây dựng; TS.</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/nghien-cuu-sinh-1.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Nghiên cứu sinh học</h3>
+                    <a href="#">Ngành Công nghệ sinh học cũng có thể được hiểu theo nghĩa hẹp bao gồm những kỹ thuật hiện đại như công nghệ di truyền và các kỹ thuật cao cấp như cố định enzyme, tạo dòng vi khuẩn tổng hợp các loại protein cho con người hay tạo các kháng thể đơn dòng. Mục tiêu của ngành này là sản xuất ở quy mô công nghiệp các chế phẩm sinh học có chất lượng cao, phục vụ cho nhu cầu và lợi ích của con người Đồng thời, ngành này góp phần rất lớn trong công cuộc phát triển kinh tế.</a>
+                </div>
+            </div>
+            <div class="chay">
+                <div class="hinhanh-daotao">
+                    <a href="#"><img src="images/nghien-cuu-sinh-2.jpg" alt=""></a>
+                </div>
+                <div class="noidung-daotao">
+                    <h3>Chương trình đào tạo</h3>
+                    <a href="#">Đặc biệt, khi theo học ngành Công nghệ sinh học của Đại học Mở TP.HCM thì bạn sẽ có các lựa chọn khác nhau đó là chương trình tiêu chuẩn và chương trình chất lượng cao. Khối lượng kiến thức của chương trình tiêu chuẩn sẽ là 130 tín chỉ còn chương trình chất lượng cao là 142 tín chỉ. Lợi thế của chương trình chất lượng cao là bạn sẽ được học số tiết học phần tiếng Anh và các môn chuyên ngành khác bằng tiếng Anh nhiều hơn chương trình tiêu chuẩn.</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="foot">
+        <div class="foot-above">
+            <a href="#">
+                    <img src="images/logo.png" alt="logo">
+            </a>
+            <p>Sứ mạng: Trường Đại học Mở thành phố Hồ Chí Minh thực hiện giáo dục mở, tạo bình đẳng cho mọi người trong giáo dục đại học, 
+                góp phần xây dựng xã hội học tập, 
+                nâng cao tri thức và năng lực nghề nghiệp cho người học bằng các phương thức linh hoạt, thuận tiện và hiệu quả.
+                <br>
+                <br>
+                Tầm nhìn: Trường Đại học Mở thành phố Hồ Chí Minh phấn đấu trở 
+                thành Đại học thực hiện giáo dục mở, định hướng ứng dụng với chất lượng cao.
+                </p>
+        </div>
+        <div class="foot-below">
+            <div class="info">
+                <div class="name-info">
+                    <h4>Thông tin chung</h4>
+                </div>
+                <div class="content-info">
+                    <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p> 
+                    <p><i class="fa-solid fa-phone"></i> Điện thoại: <span>028-38364748.</span></p> 
+                    <p><i class="fa-solid fa-fax"></i> Fax: <span>028-39207639 hoặc 028-39207640.</span> </p> 
+                    <p><i class="fa-solid fa-envelope"></i> E-mail: 
+                        <a href="mailto:ou@ou.edu.vn"> <span>ou@ou.edu.vn</span></a>
+                    </p> 
+                </div>
+                <div class="contact">
+                    <div class="name-contact">
+                        <h5>Liên hệ chúng tôi</h5>
+                    </div>
+                    <div class="icon-contact">
+                        <p><a href=""><span><i class="fa-brands fa-facebook"></i></span></a></i></p>
+                        <p><a href=""><span><i class="fa-brands fa-youtube"></i></span></a></i></p>
+                        <p><a href=""><span><i class="fa-brands fa-google"></i></span></a></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="address-big">
+                <div class="name-coso">
+                    <h4>Các sơ sở trực thuộc</h4>
+                </div>
+                <div class="address">
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 1: 97 Võ Văn Tần, P. Võ Thị Sáu, Q. 3, TP. Hồ Chí Minh.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Đại điểm 2: 35-37 Hồ Hảo Hớn, P. Cô Giang, Q. 1, TP. Hồ Chí Minh.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 3: 371 Nguyễn Kiệm, P.3, Q. Gò Vấp, TP.  Hồ Chí Minh.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 4: 02 Mai Thị Lựu, P. Đa Kao, Q. 1, TP. Hồ Chí Minh.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 5: 68 Lê Thị Trung, P. Phú Lợi, TP. Thủ Dầu Một, Tỉnh Bình Dương.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 6: Đường số 9, P. Long Bình Tân,  TP. Biên Hòa, Tỉnh Đồng Nai.</span></a></p>
+                    <p><a href="#"><span><i class="fa-solid fa-location-dot"></i> Địa điểm 7: Số 04 đường Tân Định, P. Ninh Hiệp, Thị Xã Ninh Hòa, Tỉnh Khánh Hòa.</span></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
