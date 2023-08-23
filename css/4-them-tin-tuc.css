@@ -69,58 +69,6 @@ nav{
     width: 80%;
     left: 0px;
 }
-.search-box{ 
-    background: white;
-    position: absolute;
-    border-radius: 30px;
-    right: 2%;
-    top: 10px;
-}
-.search-box .search-text{
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 18px;
-    width: 0;
-    padding: 0;
-    transition: all 0.25s ease-in-out;
-}
-.search-box:hover .search-text, .search-box .search-text:valid{
-    width: 150px;
-    padding: 10px 0px 10px 15px;
-}
-.search-box .search-btn{
-    padding: 15px;
-    border-radius: 50%;
-    background: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-}
-.search-button {
-    background-color:rgba(0, 0, 0, 0); /* Màu nền */
-    color: white; /* Màu chữ */
-    border: none; /* Loại bỏ đường viền */
-    padding: 15px 30px; /* Khoảng cách giữa nội dung và viền */
-    text-align: center; /* Căn giữa nội dung */
-    text-decoration: none; /* Loại bỏ gạch chân */
-    display: inline-block; /* Hiển thị trên cùng một dòng */
-    font-size: 16px; /* Cỡ chữ */
-    cursor: pointer; /* Đổi con trỏ chuột thành bàn tay */
-    text-shadow: rgba(0, 0, 0, 0.8);
-  }
-  /* Định dạng khi hover lên button */
-  .search-button:hover {
-    background-color: #191970; /* Màu nền thay đổi */
-  }
-  
-  /* Định dạng khi nhấn vào button */
-  .search-button:active {
-    background-color: #212189; /* Màu nền thay đổi */
-  }
-  .menu-mo-rong{
-    display: none;
-  }
 .flex{
     display: flex;
 }
@@ -159,7 +107,6 @@ nav{
     display: block;
     width: 9vw;
     padding: 5px 0px;
-    /* padding: 15px; */
     color:white;
 }
 .tool > li{
@@ -291,9 +238,6 @@ nav{
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    /* transform: translate3d(-1359px, 0px, 0px); 
-    transition: all 0.25s ease 0s; 
-    width: 6342px; */
 }
 .name-tin-lien-quan{
     text-align: center;
@@ -303,8 +247,6 @@ nav{
 .run{
     padding: 1rem;
     width: 29%;
-    /* position: absolute;
-    padding-bottom: 5rem; */
 }
 .daotao-img img {
     transition: transform 0.5s ease, filter 0.5s ease;
@@ -463,58 +405,6 @@ nav{
         width: 80%;
         left: 0px;
     }
-    .search-box{ 
-        background: white;
-        position: absolute;
-        border-radius: 30px;
-        right: 2%;
-        top: 10px;
-    }
-    .search-box .search-text{
-        border: none;
-        outline: none;
-        background: none;
-        font-size: 18px;
-        width: 0;
-        padding: 0;
-        transition: all 0.25s ease-in-out;
-    }
-    .search-box:hover .search-text, .search-box .search-text:valid{
-        width: 150px;
-        padding: 10px 0px 10px 15px;
-    }
-    .search-box .search-btn{
-        padding: 15px;
-        border-radius: 50%;
-        background: white;
-        border: none;
-        cursor: pointer;
-        font-size: 18px;
-    }
-    .search-button {
-        background-color:rgba(0, 0, 0, 0); /* Màu nền */
-        color: white; /* Màu chữ */
-        border: none; /* Loại bỏ đường viền */
-        padding: 15px 30px; /* Khoảng cách giữa nội dung và viền */
-        text-align: center; /* Căn giữa nội dung */
-        text-decoration: none; /* Loại bỏ gạch chân */
-        display: inline-block; /* Hiển thị trên cùng một dòng */
-        font-size: 16px; /* Cỡ chữ */
-        cursor: pointer; /* Đổi con trỏ chuột thành bàn tay */
-        text-shadow: rgba(0, 0, 0, 0.8);
-      }
-      /* Định dạng khi hover lên button */
-      .search-button:hover {
-        background-color: #191970; /* Màu nền thay đổi */
-      }
-      
-      /* Định dạng khi nhấn vào button */
-      .search-button:active {
-        background-color: #212189; /* Màu nền thay đổi */
-      }
-      .menu-mo-rong{
-        display: none;
-      }
     .flex{
         display: flex;
     }
@@ -543,7 +433,6 @@ nav{
     }
     .tool{
         list-style-type: none;
-        /* position:absolute; */
         top: 100%;
         width: 100%;
         justify-content: center;
@@ -558,7 +447,6 @@ nav{
         display: block;
         width: 9vw;
         padding: 5px 0px;
-        /* padding: 15px; */
         color:white;
     }
     .tool > li{
