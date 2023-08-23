@@ -36,11 +36,26 @@
                         <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i><b> Tìm kiếm</b></button>
                         <button class="menu-mo-rong"><i class="fa-solid fa-bars"></i><b> Menu</b></button>
                     </div>
-                    <!-- <form action="" class="search-box">
-                        <input type="text" class="search-text" placeholder="Tìm kiếm..." required onkeyup="searchfuc()">
-                        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form> -->
+                    <div class="icons">
+                        <i class="fas fa-search" id="search-icon"></i>
+                    </div>
             </nav>
+            <form action="" id="search-form">
+                <input type="search" name="" placeholder="Tìm kiếm..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+                <i class="fas fa-times" id="close"></i>
+                <div class="scroll">
+                    <div class="results" id="results">
+                        <div class="result">
+                            <img src="images/cntt.jpg" alt="">
+                            <div class="search-info">
+                                <div class="result-title">Công nghệ thông tin</div>
+                                <div class="result-content">Sinh viên Khoa Công nghệ thông tin tham quan công ty LogiGear Việt Nam</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
             <div class="main-menu">
                 <ul class="tool flex">  
                     <li><a href="2-gioi-thieu.html"><b>Giới thiệu</b></a></li>

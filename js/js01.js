@@ -120,5 +120,87 @@ window.onscroll = function(){
       }, 1);
   }
 
-
-
+// tìm kiếm
+$(document).ready(() => {
+  // Lấy các phần tử cần thao tác
+  const searchIcon = document.querySelector("#search-icon");
+  const searchForm = document.querySelector("#search-form");
+  const closeButton = document.querySelector("#close");
+  
+  // Sự kiện click vào biểu tượng tìm kiếm
+  searchIcon.addEventListener("click", function() {
+    searchForm.style.display = "flex";
+  });
+  
+  // Sự kiện click vào dấu X
+  closeButton.addEventListener("click", function() {
+    searchForm.style.display = "none";
+  });
+  });
+  
+  function loadResults() {
+      //Tải danh sách kết quả từ tệp JSON sử dụng fetch
+      fetch("data/results.json")
+        .then((res) => res.json()) //Chuyển đổi phản hồi thành đối tượng JSON
+        .then((data) => { //Tiếp tục xử lý dữ liệu sau khi được chuyển đổi
+          let searchBox = document.getElementById("search-box"); //Lấy thẻ input tìm kiếm
+          let resultsDiv = document.getElementById("results"); //Lấy thẻ chứa kết quả tìm kiếm
+          let searchValue = searchBox.value.toLowerCase(); //Lấy giá trị tìm kiếm và chuyển thành chữ thường
+    
+          //Lọc danh sách kết quả theo nội dung tìm kiếm
+          let matchingResults = data.filter((result) => {
+            return (
+              result.title.toLowerCase().includes(searchValue) || //Kiểm tra nếu tiêu đề chứa nội dung tìm kiếm
+              result.content.toLowerCase().includes(searchValue) //Kiểm tra nếu nội dung chứa nội dung tìm kiếm
+            );
+          });
+    
+          //Sắp xếp kết quả tìm kiếm, đưa những kết quả tương tự lên đầu danh sách
+          matchingResults.sort((a, b) => {
+            let aTitle = a.title.toLowerCase();
+            let bTitle = b.title.toLowerCase();
+            let aContent = a.content.toLowerCase();
+            let bContent = b.content.toLowerCase();
+    
+            //Các trường hợp sắp xếp và ưu tiên
+            if (
+              aTitle.startsWith(searchValue) && !bTitle.startsWith(searchValue)
+            ) {
+              return -1; //Đưa kết quả a lên đầu
+            } else if (
+              !aTitle.startsWith(searchValue) && bTitle.startsWith(searchValue)
+            ) {
+              return 1; //Đưa kết quả b lên đầu
+            } else if (
+              aContent.startsWith(searchValue) && !bContent.startsWith(searchValue)
+            ) {
+              return -1; //Đưa kết quả a lên đầu
+            } else if (
+              !aContent.startsWith(searchValue) && bContent.startsWith(searchValue)
+            ) {
+              return 1; //Đưa kết quả b lên đầu
+            } else {
+              return 0; //Giữ nguyên thứ tự của hai kết quả
+            }
+          });
+    
+          let h = "";
+          for (let p of matchingResults) {
+            //Tạo nội dung HTML cho từng kết quả tìm kiếm
+            h += `
+            <div class="result">
+                <img src="images/${p.image}" alt="">
+                <div class="result-title">${p.title}</div>
+                <div class="result-content">${p.content}</div>
+            </div> `;
+          }
+          resultsDiv.innerHTML = h; //Cập nhật kết quả tìm kiếm lên trang
+        });
+    }
+    
+    window.onload = function () {
+      let searchBox = document.getElementById("search-box"); //Lấy thẻ input tìm kiếm
+      searchBox.addEventListener("input", loadResults); //Gắn sự kiện người dùng nhập để tải kết quả tìm kiếm
+      loadResults(); //Tải kết quả tìm kiếm ban đầu
+    };
+    
