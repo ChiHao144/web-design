@@ -1,5 +1,3 @@
-
-/*const toP = document.querySelector(".header");*/
 // tạo hiệu ứng header khi trượt màn hình qua 60px
 window.addEventListener("scroll", function(){
     if(this.scrollY > 60){
