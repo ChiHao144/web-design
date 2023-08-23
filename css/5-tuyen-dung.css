@@ -375,9 +375,11 @@ h5{
     }
     .menu li a{
         color: white;
-        padding: 20px 20px;
+        padding: 26px 5px;
+        width: 7rem;
         display: block;
         text-decoration: none;
+        text-align: center;
     }
     .menu li{
         position: relative;

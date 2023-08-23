@@ -386,9 +386,11 @@ h5{
     }
     .menu li a{
         color: white;
-        padding: 20px 20px;
+        padding: 26px 5px;
+        width: 7rem;
         display: block;
         text-decoration: none;
+        text-align: center;
     }
     .menu li{
         position: relative;
@@ -563,9 +565,9 @@ h5{
     }
     #fullscreen-image {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 70%;
+        top: 1rem;
+        left: 1rem;
+        width: 90%;
         height: 50%;
         /* background-color: rgba(0, 0, 0, 0.8); */
         background-color: #fff;
@@ -575,13 +577,13 @@ h5{
       }
       
       #fullscreen-image img {
-        height: 50%;
-        width: 50%;
+        height: 90%;
+        width: 90%;
       }
       #close-button {
         position: absolute;
-        top: 35px;
-        right: 40px;
+        top: 2cqb;
+        right: 20px;
         background-color: transparent;
         color: red;
         border: none;
